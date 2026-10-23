@@ -1,0 +1,19 @@
+{
+  "name": "icit-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local bridge: Chrome extension <-> phone web harness / MCP, reachable over Bluetooth PAN",
+  "scripts": {
+    "build": "esbuild web/app.js --bundle --format=esm --platform=browser --target=safari16 --outfile=web/dist/app.js --minify",
+    "start": "npm run build && node src/server.js",
+    "dev": "node src/server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { font: 13px system-ui, sans-serif; width: 280px; margin: 0; padding: 12px; color: #222; }
+      h1 { font-size: 14px; margin: 0 0 8px; }
+      .row { display: flex; gap: 6px; align-items: center; margin: 6px 0; }
+      .dot { width: 10px; height: 10px; border-radius: 50%; background: #9e9e9e; }
+      .dot.on { background: #2e7d32; }
+      input { flex: 1; font: inherit; padding: 4px 6px; }
+      button { font: inherit; padding: 4px 8px; }
+      .muted { color: #777; font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>icit bridge</h1>
+    <div class="row"><span id="dot" class="dot"></span><span id="state">…</span></div>
+    <div class="row"><input id="url" placeholder="ws://127.0.0.1:8787/ext" /><button id="save">Save</button></div>
+    <div class="row"><button id="useTab">Use current tab as target</button><button id="reconnect">Reconnect</button></div>
+    <div id="target" class="muted"></div>
+    <div id="err" class="muted"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>

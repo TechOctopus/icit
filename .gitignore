@@ -1,0 +1,3 @@
+node_modules/
+bridge/web/dist/
+.DS_Store
